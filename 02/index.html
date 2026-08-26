@@ -10,7 +10,6 @@
         var raiz = Math.sqrt (arg1) ;
         
         alert('A raiz quadrada é '+raiz)
-
     }
 
 
@@ -19,7 +18,6 @@
         var raiz = Math.sqrt (arg2) ;
         
         alert('A raiz quadrada é '+raiz)
-
     }
 
 
@@ -28,13 +26,16 @@
         var raiz = Math.sqrt (arg3) ;
 
         alert('A raiz quadrada é '+raiz)
-
     }
 
     
     function escreveDiv(texto ){
         docuemtnt.getElementById("minhaDiv").innerHTML = texto;
+    }
 
+    function escreveDiv2(){
+        texto = prompt('Digite um texto qualquer');
+        document.getElementById("minhaDiv2").innerHTML = texto;
     }
     
 
@@ -60,9 +61,21 @@
 
 <h1>Escrevendo na Div</h1>
 
-<button onclick="escreveDiv('<h1> Programação Web</h1>')">Escrever</button> <br><br>
+<button onclick="escreveDiv('<h1> Programação Web</h1>')">Escrever</button> 
+
+<br>
+<br>
 
 <div id="minhaDiv"></div>
+
+<hr>
+   <h1>Escrevendo Texto Dinâmico</h1>
+   <button onclick="escreveDiv2()">Escrever</button>
+
+   <br>
+   <br>
+
+   <div id="minhaDiv2"></div>
 
 
 
