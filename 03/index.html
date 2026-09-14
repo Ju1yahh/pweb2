@@ -35,6 +35,39 @@
 
             alert(linguagens)
         }
+
+
+
+        let frutas = Array();
+
+        frutas[0] = 'Maçã' ;
+        frutas[1] = 'Banana' ;
+        frutas[2] = 'Laranja' ;
+        frutas[3] = 'Uva' ;
+        frutas[4] = 'Pera' ;
+        frutas[5] = 'Manga' ;
+        frutas[6] = 'Abacaxi' ;
+        
+        function mostrarListaFrutas(){
+
+            const container = document.getElementById('minhaDiv');
+
+            for (var i = 0; i < frutas.length; i++) {
+
+                var tag = '<h5>' + i + ' - ' + frutas[i] + '</h5>';
+
+                container.innerHTML += tag
+            }
+        }
+
+        function posicaoFrutas(){
+
+            var indice = prompt('Qual posição da lista deseja consultar?');
+
+            alert(frutas)
+        }
+
+
     </script>
 </head>
 <body>
