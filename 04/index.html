@@ -12,9 +12,9 @@
 
     function mostrarLista() {
         const container = document.getElementById('minhaDiv');
-        container.innerHTML = ''; // Limpa o conteúdo atual do container
+        container.innerHTML = ''; 
 
-        for (var i = 0; i < pilhaPessoas.length; i++) { // Mostra os elemenetos
+        for (var i = 0; i < pilhaPessoas.length; i++) { 
             var tag = '<h5>' + i + ' - ' + pilhaPessoas[i] + '</h5>';
             container.innerHTML += tag;
         }
@@ -27,9 +27,8 @@
     }
 
     function posicao() {
-        // Pede o índice
         var indice = prompt('Qual posição da lista deseja consultar?');
-        // Converte para número
+        
         indice = Number(indice);
         // Valida se a pessoa esta dentro do intervalo
         if (indice < 0 || indice >= pilhaPessoas.length) {
@@ -57,6 +56,20 @@
         mostrarLista();
     }
 
+    function inverterpilha() {
+        if (pilhaPessoas.length === 0) {
+           alert("A pilha está vazia!");
+           return;
+        }
+      
+        pilhaPessoas.reverse();
+    
+        mostrarLista();
+        
+
+    }
+
+
 </script>
 
 <body>
@@ -70,6 +83,8 @@
     <button onclick="remover()">Remover</button>
 
     <button onclick="limparLista()">Limpar Lista</button>
+
+    <button onclick="inverterpilha()">Inverter</button>
 
     <div id="minhaDiv"></div>
 
